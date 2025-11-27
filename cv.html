@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="doc-title">PHD Project: Decoding Consumer Psychology in Immersive Marketing</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Apply Inter font family and minimalist background */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* Pure white background */
+            color: #1f2937; /* Dark Gray for text */
+        }
+        /* Custom scrollbar for aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #d1d5db; /* Light gray */
+            border-radius: 4px;
+        }
+        /* Define dark background color for hero and footer */
+        .dark-bg {
+            background-color: #007A78; /* Deep Teal/Cyan based on user request */
+        }
+        .section-separator {
+            border-bottom: 1px solid #e5e7eb; /* Subtle light gray line */
+        }
+        /* Style for the small header title */
+        .header-title {
+            color: #007A78; /* Teal color */
+            font-size: 0.9rem; /* Roughly 20% smaller than text-xl */
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header / Navigation Bar (Minimalist White) -->
+    <header class="border-b border-gray-100 bg-white sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Updated Header Title with ID for dynamic translation -->
+            <div id="header-project-title" class="header-title font-bold tracking-widest uppercase">
+                TENTATIVE PHD RESEARCH PROJECT
+            </div>
+            <nav class="flex items-center space-x-6">
+                <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                    <!-- Added CV Link -->
+                    <a href="cv.html" target="_blank" id="nav-cv" class="hover:text-black transition duration-150 flex items-center">
+                        <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        View/Download C.V.
+                    </a>
+                    <!-- Updated Objectives to Core Areas -->
+                    <a href="#objectives" id="nav-core-areas" class="hover:text-black transition duration-150">Core Areas</a>
+                    <a href="#contact" id="nav-contact" class="hover:text-black transition duration-150">Contact</a>
+                </div>
+                <!-- Language Switch Toggle: Content (flag and text) now controlled by JavaScript -->
+                <button id="lang-toggle" onclick="toggleLanguage()" class="p-2 border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-50 transition duration-150 flex items-center">
+                    <span id="lang-flag" class="mr-2" role="img" aria-label="Flag"></span>
+                    <span id="lang-text"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section (High Contrast Dark) -->
+    <section class="dark-bg text-white py-24 md:py-40 border-b border-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 id="hero-title" class="text-3xl sm:text-5xl font-light mb-8 leading-tight tracking-tighter" style="color: #FFC745;">
+                Decoding Consumer Psychology in Immersive Marketing
+            </h1>
+            <p id="hero-subtitle" class="text-xl sm:text-2xl font-normal max-w-4xl mx-auto mb-6">
+                An AI-Generative Framework Using Performing Arts Approaches to Orchestrate and Predict Brand Experience Outcomes.
+            </p>
+            <!-- Descriptive text -->
+            <p id="hero-desc" class="text-lg font-light max-w-4xl mx-auto mb-10 text-gray-300">
+                This project aims to elaborate consumer behavior psychology by focusing on four progressive core areas. Each systematically builds on the previous research and provides the empirical foundation for the subsequent investigations, culminating in an AI-powered framework for brand experience design.
+            </p>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+
+        <!-- 2. Core Objectives (The Four Core Areas) -->
+        <section id="objectives" class="mb-24">
+            <h2 id="objectives-title" class="text-3xl sm:text-4xl font-light text-center mb-16 text-gray-900 border-b border-gray-200 pb-3 uppercase tracking-wider">Four Core Research Areas</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12">
+                
+                <!-- Objective 1: Creating the Stage -->
+                <div class="p-4 border-l-2 border-gray-300 hover:border-black transition duration-300">
+                    <div class="text-3xl mb-4 text-gray-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m-4 13l-2-1m2 1v2m-2-1v-2.5C20 7 14 3 12 3S4 7 4 7v10.5M10 21l2-1 2 1" />
+                        </svg>
+                    </div>
+                    <h3 id="obj1-title" class="text-xl font-medium mb-2 text-gray-900">1. Creating the Stage</h3>
+                    <p id="obj1-text" class="text-gray-600 text-sm">Transform theatrical elements (lighting, dialogue, props) into measurable experiential marketing variables to orchestrate interactive scenarios and form decision cues.</p>
+                </div>
+                
+                <!-- Objective 2: Refocusing the Human Narrative -->
+                <div class="p-4 border-l-2 border-gray-300 hover:border-black transition duration-300">
+                    <div class="text-3xl mb-4 text-gray-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20v-2m0 2H7m10 0h3.385C19.501 20.207 20 20.007 20 19v-2a1 1 0 00-1-1H4a1 1 0 00-1 1v2a1 1 0 001 1h9m-9 0V9a1 1 0 011-1h10a1 1 0 011 1v11M5 18H3.454C3.243 18.234 3 18.729 3 19v2.5C3 21.771 3.243 22 3.454 22h16.092c.211 0 .454-.229.454-.5V19c0-.271-.243-.766-.454-1H17" />
+                        </svg>
+                    </div>
+                    <h3 id="obj2-title" class="text-xl font-medium mb-2 text-gray-900">2. Refocusing the Narrative</h3>
+                    <p id="obj2-text" class="text-gray-600 text-sm">Apply Stanislavsky's Method Acting techniques to construct complex customer profiles, targeting identity, motivation, and emotional states for judgment prediction.</p>
+                </div>
+                
+                <!-- Objective 3: Scripting Consumer Journeys -->
+                <div class="p-4 border-l-2 border-gray-300 hover:border-black transition duration-300">
+                    <div class="text-3xl mb-4 text-gray-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                        </svg>
+                    </div>
+                    <h3 id="obj3-title" class="text-xl font-medium mb-2 text-gray-900">3. Scripting Journeys</h3>
+                    <p id="obj3-text" class="text-gray-600 text-sm">Adapt the Standardized Patient (SP) methodology to structure controlled interaction progressions, generating comprehensive datasets for precise touchpoint optimization.</p>
+                </div>
+                
+                <!-- Objective 4: AI-Generative Characterizing -->
+                <div class="p-4 border-l-2 border-gray-300 hover:border-black transition duration-300">
+                    <div class="text-3xl mb-4 text-gray-900">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 12H3m18 0h-2M6.343 17.657L5 19m14 0l-1.343-1.343M6.343 6.343L5 5m14 0l-1.343 1.343m1.343 9.314c-2.485 0-4.5 2.015-4.5 4.5s2.015 4.5 4.5 4.5 4.5-2.015 4.5-4.5-2.015-4.5-4.5-4.5zm0 9c-.828 0-1.5-.672-1.5-1.5s.672-1.5 1.5-1.5 1.5.672 1.5 1.5-.672 1.5-1.5 1.5z" />
+                        </svg>
+                    </div>
+                    <h3 id="obj4-title" class="text-xl font-medium mb-2 text-gray-900">4. AI-Generative Characterizing</h3>
+                    <p id="obj4-text" class="text-gray-600 text-sm">Integrate frameworks to train an AI model that automatically generates brand archetypes and dynamic brand encounter scripts to drive value creation.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer / Contact Section (High Contrast Dark) -->
+    <footer id="contact" class="dark-bg text-white py-16 md:py-20 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 id="contact-title" class="text-3xl font-light mb-6 uppercase tracking-wider">Contact</h3>
+            
+            <!-- Combined Contact Text and Email into one line, using text-sm and no bolding -->
+            <p id="contact-text-and-email" class="text-sm font-light mb-4 text-white">
+                For collaboration inquiries or further information regarding this tentative research: <a href="mailto:vitayang@vitayang.info" class="underline hover:text-gray-200 transition duration-150">vitayang@vitayang.info</a>
+            </p>
+
+            <!-- Footer copyright and candidate info updated to text-white -->
+            <div class="mt-10 pt-8 border-t border-gray-700 text-sm text-white">
+                <p id="footer-copy">&copy; 2025 PhD Project | All content is tentative and subject to change.</p>
+                <p id="footer-candidate">Candidate: Chen-ling Vita Yang</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for smooth scrolling and language toggling -->
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                // If it's a link to another page (like cv.html), don't prevent default
+                if (this.getAttribute('href').startsWith('#')) {
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // --- Language Toggle Logic ---
+
+        let currentLang = 'en';
+
+        const content = {
+            'en': {
+                navCV: 'View/Download C.V.',
+                navCoreAreas: 'Core Areas',
+                navContact: 'Contact',
+                headerTitle: 'TENTATIVE PHD RESEARCH PROJECT', 
+                docTitle: 'PHD Project: Decoding Consumer Psychology in Immersive Marketing',
+                heroTitle: 'Decoding Consumer Psychology in Immersive Marketing',
+                heroSubtitle: 'An AI-Generative Framework Using Performing Arts Approaches to Orchestrate and Predict Brand Experience Outcomes.',
+                heroDesc: 'This project aims to elaborate consumer behavior psychology by focusing on four progressive core areas. Each systematically builds on the previous research and provides the empirical foundation for the subsequent investigations, culminating in an AI-powered framework for brand experience design.',
+                objectivesTitle: 'Four Core Research Areas',
+                obj1Title: '1. Creating the Stage',
+                obj1Text: 'Transform theatrical elements-<b>performers</b>, <b>dialogue</b>, <b>lighting</b>, and <b>props</b>-into experiential marketing essentials, to orchestrate brand-consumer interactive scenarios and form actionable decision cues.',
+                obj2Title: '2. Refocusing the Human Narrative',
+                obj2Text: "Applying psychological <b>Character Development</b> techniques from Stanislavsky's <b>Method Acting</b> constructs complex customer profiles by delving into their sociocultural contexts, motivations, and emotional states to better target consumer identity and enable judgment prediction.",
+                obj3Title: '3. Scripting Consumer Journeys',
+                obj3Text: 'By adapting the <b>Standardized Patient (SP)</b> methodology from medical education, this research will structure controlled interaction progressions. The systematic rehearsals will generate comprehensive datasets for precise touchpoint optimization.',
+                obj4Title: '4. AI-Generative Characterizing Brand Encounters',
+                obj4Text: 'This part of the research integrates the frameworks and data to train an <b>Al model</b> that automatically generates brand archetypes and dynamic brand encounter scripts to manage experiences, encourage authentic engagement, and drive value creation.',
+                contactTitle: 'Contact',
+                contactTextAndEmail: 'For collaboration inquiries or further information regarding this tentative research: <a href="mailto:vitayang@vitayang.info" class="underline hover:text-gray-200 transition duration-150">vitayang@vitayang.info</a>',
+                footerCopy: '&copy; 2025 PhD Project | All content is tentative and subject to change.',
+                footerCandidate: 'Candidate: Chen-ling Vita Yang',
+                toggleFlag: '🇹🇼', 
+                toggleText: '中文'
+            },
+            'zh': {
+                navCV: '履歷下載',
+                navCoreAreas: '內容',
+                navContact: '聯絡',
+                headerTitle: '博士研究提案',
+                docTitle: '解碼沉浸式行銷中的消費者心理學',
+                heroTitle: '解碼沉浸式行銷中的消費者心理學',
+                heroSubtitle: '以表演藝術為基礎方法的人工智慧生成框架',
+                heroDesc: '本計畫旨在透過四個相互連結的核心領域,深入闡述消費者行為心理學。各領域層層遞進,最終 整合為一個以人工智慧為核心的品牌體驗設計架構。',
+                objectivesTitle: '四個核心研究領域',
+                obj1Title: '1. 創造研究「舞台」模型',
+                obj1Text: '將戲劇元素(<b>表演者</b>、<b>對白</b>、<b>燈光</b>與<b>道具</b>等)轉化為體驗式行銷的各項核心要素,視之為<b>變數</b>;用前述要素創造及模擬品牌與消費者的互動情境為<b>可控制模型</b>,形成各種模型腳本;收集消費者反應,形成可量化的<b>購買決策因素對應組合</b>。',
+                obj2Title: '2. 重新聚焦「消費者人物敍事」',
+                obj2Text: '運用史坦尼斯拉夫斯基表演方法「<b>方法演技</b>」的心理學<b>角色發展</b>技術,透過深入探討消費者的社經、文化背景、動機和對品牌的情感狀態,建構複雜的背景故事,亦即<b>顧客輪廓</b>,以其能為品牌更精準地鎖定<b>消費者身份</b>並<b>預判購買能力</b>。',
+                obj3Title: '3. 構建消費者旅程',
+                obj3Text: '藉由醫學教育中的<b>標準化病人 (SP)</b> 方法,本研究將上述的舞台效果以「<b>變數</b>」形式逐步設計編排的品牌及消費者的<b>敘事藍圖</b>,使互動過程<b>完全受控</b>。透過系統化的演練,生成全面的<b>互動資料組合</b>,以期能藉由數據<b>精準地優化每個顧客旅程接觸點</b>。',
+                obj4Title: '4. 人工智慧賦形-品牌接觸點動態塑型',
+                obj4Text: '研究的這一部分將整合前述的分析框架和數據資料,訓練一個<b>人工智慧模型</b>,使其能自動生成<b>品牌價值人格原型</b>,並自動依<b>變數</b>生成<b>品牌接觸點旅程敍事</b>,打造<b>對應可控模型</b>。使顧客獲得<b>自然且流暢的接觸體驗</b>、<b>深度參與互動</b>,並<b>驅動價值轉化</b>,實現<b>商業效益最大化</b>。',
+                contactTitle: '聯絡方式',
+                contactTextAndEmail: '如欲進行合作洽談或需進一步瞭解本研究計畫 <a href="mailto:vitayang@vitayang.info" class="underline hover:text-gray-200 transition duration-150">vitayang@vitayang.info</a>',
+                footerCopy: '&copy; 2025 博士研究計畫 | 內容皆為暫定，依研究進度更動。',
+                footerCandidate: '研究生: 楊晨聆 Chen-ling Vita Yang',
+                toggleFlag: '🇺🇸', 
+                toggleText: 'EN'
+            }
+        };
+
+        function updateContent(lang) {
+            const data = content[lang];
+            
+            // Update Nav Links
+            document.getElementById('nav-cv').innerHTML = `<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>${data.navCV}`;
+            document.getElementById('nav-core-areas').textContent = data.navCoreAreas;
+            document.getElementById('nav-contact').textContent = data.navContact;
+
+            document.getElementById('header-project-title').textContent = data.headerTitle;
+            document.getElementById('doc-title').textContent = data.docTitle;
+            document.getElementById('hero-title').textContent = data.heroTitle;
+            document.getElementById('hero-subtitle').textContent = data.heroSubtitle;
+            document.getElementById('hero-desc').textContent = data.heroDesc;
+            document.getElementById('objectives-title').textContent = data.objectivesTitle;
+            
+            document.getElementById('obj1-title').textContent = data.obj1Title;
+            document.getElementById('obj1-text').innerHTML = data.obj1Text;
+            document.getElementById('obj2-title').textContent = data.obj2Title;
+            document.getElementById('obj2-text').innerHTML = data.obj2Text;
+            document.getElementById('obj3-title').textContent = data.obj3Title;
+            document.getElementById('obj3-text').innerHTML = data.obj3Text;
+            document.getElementById('obj4-title').textContent = data.obj4Title;
+            document.getElementById('obj4-text').innerHTML = data.obj4Text;
+            
+            document.getElementById('contact-title').textContent = data.contactTitle;
+            document.getElementById('contact-text-and-email').innerHTML = data.contactTextAndEmail;
+            
+            document.getElementById('footer-copy').innerHTML = data.footerCopy;
+            document.getElementById('footer-candidate').textContent = data.footerCandidate;
+
+            document.getElementById('lang-flag').textContent = data.toggleFlag;
+            document.getElementById('lang-text').textContent = data.toggleText;
+            
+            document.documentElement.lang = lang;
+        }
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            updateContent(currentLang);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateContent(currentLang);
+        });
+    </script>
+
+</body>
+</html>
