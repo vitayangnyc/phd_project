@@ -4,59 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="doc-title">PHD Project: Decoding Consumer Psychology in Immersive Marketing</title>
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
-        /* Apply Inter font family and minimalist background */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #ffffff; /* Pure white background */
-            color: #1f2937; /* Dark Gray for text */
+            background-color: #ffffff;
+            color: #1f2937;
         }
-        /* Custom scrollbar for aesthetics */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-thumb {
-            background-color: #d1d5db; /* Light gray */
+            background-color: #d1d5db;
             border-radius: 4px;
         }
-        /* Define dark background color for hero and footer */
         .dark-bg {
-            background-color: #007A78; /* Deep Teal/Cyan based on user request */
+            background-color: #007A78;
         }
         .section-separator {
-            border-bottom: 1px solid #e5e7eb; /* Subtle light gray line */
+            border-bottom: 1px solid #e5e7eb;
         }
-        /* Style for the small header title */
         .header-title {
-            color: #007A78; /* Teal color */
-            font-size: 0.9rem; /* Roughly 20% smaller than text-xl */
+            color: #007A78;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body class="text-gray-800">
 
-    <!-- Header / Navigation Bar (Minimalist White) -->
     <header class="border-b border-gray-100 bg-white sticky top-0 z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <!-- Updated Header Title with ID for dynamic translation -->
             <div id="header-project-title" class="header-title font-bold tracking-widest uppercase">
                 TENTATIVE PHD RESEARCH PROJECT
             </div>
             <nav class="flex items-center space-x-6">
-                <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
-                    <!-- CV Link: target="_blank" has been removed to open in the same tab -->
+                <div class="flex space-x-4 md:space-x-8 text-sm font-medium uppercase tracking-widest">
                     <a href="cv.html" id="nav-cv" class="hover:text-black transition duration-150 flex items-center">
                         <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                         View/Download C.V.
                     </a>
-                    <!-- Updated Objectives to Core Areas -->
                     <a href="#objectives" id="nav-core-areas" class="hover:text-black transition duration-150">Core Areas</a>
                     <a href="#contact" id="nav-contact" class="hover:text-black transition duration-150">Contact</a>
                 </div>
-                <!-- Language Switch Toggle: Content (flag and text) now controlled by JavaScript -->
                 <button id="lang-toggle" onclick="toggleLanguage()" class="p-2 border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-50 transition duration-150 flex items-center">
                     <span id="lang-flag" class="mr-2" role="img" aria-label="Flag"></span>
                     <span id="lang-text"></span>
@@ -65,7 +55,6 @@
         </div>
     </header>
 
-    <!-- 1. Hero Section (High Contrast Dark) -->
     <section class="dark-bg text-white py-24 md:py-40 border-b border-gray-800">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 id="hero-title" class="text-3xl sm:text-5xl font-light mb-8 leading-tight tracking-tighter" style="color: #FFC745;">
@@ -74,7 +63,6 @@
             <p id="hero-subtitle" class="text-xl sm:text-2xl font-normal max-w-4xl mx-auto mb-6">
                 An AI-Generative Framework Using Performing Arts Approaches to Orchestrate and Predict Brand Experience Outcomes.
             </p>
-            <!-- Descriptive text -->
             <p id="hero-desc" class="text-lg font-light max-w-4xl mx-auto mb-10 text-gray-300">
                 This project aims to elaborate consumer behavior psychology by focusing on four progressive core areas. Each systematically builds on the previous research and provides the empirical foundation for the subsequent investigations, culminating in an AI-powered framework for brand experience design.
             </p>
@@ -83,12 +71,10 @@
 
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
 
-        <!-- 2. Core Objectives (The Four Core Areas) -->
         <section id="objectives" class="mb-24">
             <h2 id="objectives-title" class="text-3xl sm:text-4xl font-light text-center mb-16 text-gray-900 border-b border-gray-200 pb-3 uppercase tracking-wider">Four Core Research Areas</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12">
                 
-                <!-- Objective 1: Creating the Stage -->
                 <div class="p-4 border-l-2 border-gray-300 hover:border-black transition duration-300">
                     <div class="text-3xl mb-4 text-gray-900">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -96,11 +82,9 @@
                         </svg>
                     </div>
                     <h3 id="obj1-title" class="text-xl font-medium mb-2 text-gray-900">1. Creating the Stage</h3>
-                    <!-- Updated with Em Dashes and corrected bolding -->
                     <p id="obj1-text" class="text-gray-600 text-sm">Transform <b>theatrical elements</b>—performers, dialogue, lighting, and props—into experiential marketing essentials, to orchestrate brand-consumer interactive scenarios and form actionable decision cues.</p>
                 </div>
                 
-                <!-- Objective 2: Refocusing the Human Narrative -->
                 <div class="p-4 border-l-2 border-gray-300 hover:border-black transition duration-300">
                     <div class="text-3xl mb-4 text-gray-900">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -111,7 +95,6 @@
                     <p id="obj2-text" class="text-gray-600 text-sm">Applying psychological <b>Character Development</b> techniques from Stanislavsky's <b>Method Acting</b> constructs complex customer profiles by delving into their sociocultural contexts, motivations, and emotional states to better target consumer identity and enable judgment prediction.</p>
                 </div>
                 
-                <!-- Objective 3: Scripting Consumer Journeys -->
                 <div class="p-4 border-l-2 border-gray-300 hover:border-black transition duration-300">
                     <div class="text-3xl mb-4 text-gray-900">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -122,7 +105,6 @@
                     <p id="obj3-text" class="text-gray-600 text-sm">By adapting the <b>Standardized Patient (SP)</b> methodology from medical education, this research will structure controlled interaction progressions. The systematic rehearsals will generate comprehensive datasets for precise touchpoint optimization.</p>
                 </div>
                 
-                <!-- Objective 4: AI-Generative Characterizing -->
                 <div class="p-4 border-l-2 border-gray-300 hover:border-black transition duration-300">
                     <div class="text-3xl mb-4 text-gray-900">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -137,17 +119,14 @@
 
     </main>
 
-    <!-- Footer / Contact Section (High Contrast Dark) -->
     <footer id="contact" class="dark-bg text-white py-16 md:py-20 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h3 id="contact-title" class="3xl font-light mb-6 uppercase tracking-wider">Contact</h3>
             
-            <!-- Combined Contact Text and Email into one line, using text-sm and no bolding -->
             <p id="contact-text-and-email" class="text-sm font-light mb-4 text-white">
                 For collaboration inquiries or further information regarding this tentative research: <a href="mailto:vitayang@vitayang.info" class="underline hover:text-gray-200 transition duration-150">vitayang@vitayang.info</a>
             </p>
 
-            <!-- Footer copyright and candidate info updated to text-white -->
             <div class="mt-10 pt-8 border-t border-gray-700 text-sm text-white">
                 <p id="footer-copy">&copy; 2025 PhD Project | All content is tentative and subject to change.</p>
                 <p id="footer-candidate">Candidate: Chen-ling Vita Yang</p>
@@ -155,10 +134,7 @@
         </div>
     </footer>
 
-    <!-- JavaScript for smooth scrolling and language toggling -->
     <script>
-        // FIX: The original code was preventing non-hash links (like cv.html) from working.
-        // We ensure that only links starting with '#' use the smooth scroll behavior.
         document.querySelectorAll('a[href]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
@@ -168,12 +144,9 @@
                         behavior: 'smooth'
                     });
                 }
-                // Links not starting with '#' (like cv.html) will now follow their default behavior.
             });
         });
 
-
-        // --- Language Toggle Logic ---
 
         let currentLang = 'en';
 
@@ -189,7 +162,6 @@
                 heroDesc: 'This project aims to elaborate consumer behavior psychology by focusing on four progressive core areas. Each systematically builds on the previous research and provides the empirical foundation for the subsequent investigations, culminating in an AI-powered framework for brand experience design.',
                 objectivesTitle: 'Four Core Research Areas',
                 obj1Title: '1. Creating the Stage',
-                // Updated with Em Dashes and correct bolding
                 obj1Text: 'Transform <b>theatrical elements</b>—performers, dialogue, lighting, and props—into experiential marketing essentials, to orchestrate brand-consumer interactive scenarios and form actionable decision cues.',
                 obj2Title: '2. Refocusing the Human Narrative',
                 obj2Text: "Applying psychological <b>Character Development</b> techniques from Stanislavsky's <b>Method Acting</b> constructs complex customer profiles by delving into their sociocultural contexts, motivations, and emotional states to better target consumer identity and enable judgment prediction.",
@@ -215,15 +187,11 @@
                 heroDesc: '本計畫旨在透過四個相互連結的核心領域，深入闡述消費者行為心理學。各領域層層遞進，最終整合為一個以人工智慧為核心的品牌體驗設計架構。',
                 objectivesTitle: '四個核心研究領域',
                 obj1Title: '1. 創造研究「舞台」模型',
-                // Updated with mb-1.5 spacing
                 obj1Text: `<p class="mb-1.5">將戲劇元素（表演者、對白、燈光與道具等）轉化為體驗式行銷的各項核心要素，視之為<b>變數</b>。</p><p class="mb-1.5">用前述要素創造及模擬品牌與消費者的互動情境為可控制模型，形成各種模型腳本。</p><p>收集消費者反應，形成可量化的<b>購買決策因素對應組合</b>。</p>`,
                 obj2Title: '2. 重新聚焦「消費者人物敍事」',
-                // Added underline to Stanislavsky's name and updated with Method Acting in parentheses and mb-1.5 spacing
                 obj2Text: `<p class="mb-1.5">運用<u>史坦尼斯．拉夫斯基</u>表演方法「<b>方法演技 (Method Acting)</b> 」的心理學角色發展技術，透過深入探討消費者的社經、文化背景、動機和對品牌的情感狀態。</p><p>用獲得之數據建構複雜的背景故事，亦即顧客輪廓，以其能為品牌更<b>精準地鎖定消費者身份並預判購買能力</b>。</p>`,
                 obj3Title: '3. 構建消費者旅程',
-                // Updated with mb-1.5 spacing and correct bolding
                 obj3Text: `<p class="mb-1.5">藉由醫學教育中的<b>標準化病人 (Standard Patient)</b> 方法，本研究將上述的舞台效果以「變數」形式逐步設計編排的品牌及消費者的敘事藍圖，使互動過程<b>完全受控</b>。</p><p>透過系統化的演練，生成全面的互動資料組合，以期能<b>藉由數據精準地優化每個顧客旅程接觸點</b>。</p>`,
-                // FIX: Used &nbsp; to align the second line '品牌接觸點動態塑型' under '人' (after '4. ').
                 obj4Title: '4. 人工智慧賦形<br>&nbsp;&nbsp;&nbsp;&nbsp;品牌接觸點動態塑型', 
                 obj4Text: `<p class="mb-1.5">此部分將整合前述的分析框架和數據資料，訓練一個<b>人工智慧模型</b>，使其能自動生成品牌價值人格原型，並自動依變數生成品牌接觸點旅程敍事，打造對應可控模型。</p><p>此模型使顧客<b>獲得自然且流暢的接觸體驗、深度參與互動，並驅動價值轉化，實現商業效益最大化</b>。</p>`,
                 contactTitle: '聯絡方式',
@@ -238,7 +206,6 @@
         function updateContent(lang) {
             const data = content[lang];
             
-            // Update Nav Links
             document.getElementById('nav-cv').innerHTML = `<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>${data.navCV}`;
             document.getElementById('nav-core-areas').textContent = data.navCoreAreas;
             document.getElementById('nav-contact').textContent = data.navContact;
@@ -256,7 +223,7 @@
             document.getElementById('obj2-text').innerHTML = data.obj2Text;
             document.getElementById('obj3-title').textContent = data.obj3Title;
             document.getElementById('obj3-text').innerHTML = data.obj3Text;
-            document.getElementById('obj4-title').innerHTML = data.obj4Title; // Use innerHTML for <br> and &nbsp;
+            document.getElementById('obj4-title').innerHTML = data.obj4Title;
             document.getElementById('obj4-text').innerHTML = data.obj4Text;
             
             document.getElementById('contact-title').textContent = data.contactTitle;
