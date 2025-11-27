@@ -29,6 +29,15 @@
             color: #007A78;
             font-size: 0.9rem;
         }
+        /* Style for the fixed language button position on mobile */
+        @media (max-width: 767px) {
+            .mobile-lang-position {
+                position: absolute;
+                top: 0.5rem; /* Adjust based on desired spacing */
+                left: 0.5rem; /* Adjust based on desired spacing */
+                z-index: 20;
+            }
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -37,21 +46,26 @@
         <!-- Main Header Container: Stacks vertically on mobile (flex-col), changes to horizontal on md: (md:flex-row) -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-start md:items-center">
             
-            <!-- Top Row (Title and Toggle) - Always side-by-side -->
-            <div class="flex justify-between items-center w-full md:w-auto mb-3 md:mb-0">
-                <div id="header-project-title" class="header-title font-bold tracking-widest uppercase">
+            <!-- Language Toggle (Moved to the absolute top-left on mobile) -->
+            <button id="lang-toggle" onclick="toggleLanguage()" class="p-2 border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-50 transition duration-150 flex items-center md:hidden mobile-lang-position">
+                <span id="lang-flag-mobile" class="mr-2" role="img" aria-label="Flag"></span>
+                <span id="lang-text-mobile"></span>
+            </button>
+
+            <!-- Top Row (Title and Toggle) - Adjusted for desktop: Toggle is now left of the title -->
+            <div class="flex items-center w-full md:w-auto mb-3 md:mb-0 pt-8 md:pt-0">
+                <!-- Language Toggle for Desktop (Displayed on md screens and moved to the left) -->
+                <button id="lang-toggle-desktop" onclick="toggleLanguage()" class="p-2 border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-50 transition duration-150 flex items-center mr-4 hidden md:flex">
+                    <span id="lang-flag-desktop" class="mr-2" role="img" aria-label="Flag"></span>
+                    <span id="lang-text-desktop"></span>
+                </button>
+                <div id="header-project-title" class="header-title font-bold tracking-widest uppercase ml-0">
                     TENTATIVE PHD RESEARCH PROJECT
                 </div>
-                <!-- Language Toggle -->
-                <button id="lang-toggle" onclick="toggleLanguage()" class="p-2 border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-50 transition duration-150 flex items-center ml-4 md:ml-0">
-                    <span id="lang-flag" class="mr-2" role="img" aria-label="Flag"></span>
-                    <span id="lang-text"></span>
-                </button>
             </div>
 
             <!-- Navigation Links (Bottom row on mobile, full width and wrapping) -->
             <nav class="w-full md:w-auto">
-                <!-- flex-wrap allows items to break into two lines on mobile. justify-between spreads them out. -->
                 <div class="flex flex-wrap justify-between md:justify-end md:space-x-8 text-sm font-medium uppercase tracking-widest pt-2 md:pt-0 border-t md:border-t-0 border-gray-100">
                     <a href="cv.html" id="nav-cv" class="hover:text-black transition duration-150 flex items-center">
                         <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
@@ -216,6 +230,7 @@
         function updateContent(lang) {
             const data = content[lang];
             
+            // Mobile and Desktop elements need to be updated with the same content
             document.getElementById('nav-cv').innerHTML = `<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>${data.navCV}`;
             document.getElementById('nav-core-areas').textContent = data.navCoreAreas;
             document.getElementById('nav-contact').textContent = data.navContact;
@@ -242,8 +257,11 @@
             document.getElementById('footer-copy').innerHTML = data.footerCopy;
             document.getElementById('footer-candidate').textContent = data.footerCandidate;
 
-            document.getElementById('lang-flag').textContent = data.toggleFlag;
-            document.getElementById('lang-text').textContent = data.toggleText;
+            // Update Language Toggles (Mobile and Desktop)
+            document.getElementById('lang-flag-mobile').textContent = data.toggleFlag;
+            document.getElementById('lang-text-mobile').textContent = data.toggleText;
+            document.getElementById('lang-flag-desktop').textContent = data.toggleFlag;
+            document.getElementById('lang-text-desktop').textContent = data.toggleText;
             
             document.documentElement.lang = lang;
         }
