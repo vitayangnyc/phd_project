@@ -34,12 +34,25 @@
 <body class="text-gray-800">
 
     <header class="border-b border-gray-100 bg-white sticky top-0 z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <div id="header-project-title" class="header-title font-bold tracking-widest uppercase">
-                TENTATIVE PHD RESEARCH PROJECT
+        <!-- Main Header Container: Stacks vertically on mobile (flex-col), changes to horizontal on md: (md:flex-row) -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-start md:items-center">
+            
+            <!-- Top Row (Title and Toggle) - Always side-by-side -->
+            <div class="flex justify-between items-center w-full md:w-auto mb-3 md:mb-0">
+                <div id="header-project-title" class="header-title font-bold tracking-widest uppercase">
+                    TENTATIVE PHD RESEARCH PROJECT
+                </div>
+                <!-- Language Toggle -->
+                <button id="lang-toggle" onclick="toggleLanguage()" class="p-2 border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-50 transition duration-150 flex items-center ml-4 md:ml-0">
+                    <span id="lang-flag" class="mr-2" role="img" aria-label="Flag"></span>
+                    <span id="lang-text"></span>
+                </button>
             </div>
-            <nav class="flex items-center space-x-6">
-                <div class="flex space-x-4 md:space-x-8 text-sm font-medium uppercase tracking-widest">
+
+            <!-- Navigation Links (Bottom row on mobile, full width and wrapping) -->
+            <nav class="w-full md:w-auto">
+                <!-- flex-wrap allows items to break into two lines on mobile. justify-between spreads them out. -->
+                <div class="flex flex-wrap justify-between md:justify-end md:space-x-8 text-sm font-medium uppercase tracking-widest pt-2 md:pt-0 border-t md:border-t-0 border-gray-100">
                     <a href="cv.html" id="nav-cv" class="hover:text-black transition duration-150 flex items-center">
                         <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                         View/Download C.V.
@@ -47,11 +60,8 @@
                     <a href="#objectives" id="nav-core-areas" class="hover:text-black transition duration-150">Core Areas</a>
                     <a href="#contact" id="nav-contact" class="hover:text-black transition duration-150">Contact</a>
                 </div>
-                <button id="lang-toggle" onclick="toggleLanguage()" class="p-2 border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-50 transition duration-150 flex items-center">
-                    <span id="lang-flag" class="mr-2" role="img" aria-label="Flag"></span>
-                    <span id="lang-text"></span>
-                </button>
             </nav>
+
         </div>
     </header>
 
