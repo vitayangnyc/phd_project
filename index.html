@@ -29,13 +29,18 @@
             color: #007A78;
             font-size: 0.9rem;
         }
-        /* Style for the fixed language button position on mobile */
+        /* Mobile-specific adjustments for header layout */
         @media (max-width: 767px) {
-            .mobile-lang-position {
-                position: absolute;
-                top: 0.5rem; /* Adjust based on desired spacing */
-                left: 0.5rem; /* Adjust based on desired spacing */
-                z-index: 20;
+            .mobile-header-top {
+                display: flex;
+                justify-content: space-between; /* Pushes title and toggle to the edges */
+                align-items: center;
+                width: 100%;
+                margin-bottom: 0.75rem; /* Space before nav links */
+                padding-top: 0.5rem;
+            }
+            .mobile-nav-links {
+                justify-content: center; /* Center aligns the links */
             }
         }
     </style>
@@ -46,33 +51,55 @@
         <!-- Main Header Container: Stacks vertically on mobile (flex-col), changes to horizontal on md: (md:flex-row) -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-start md:items-center">
             
-            <!-- Language Toggle (Moved to the absolute top-left on mobile) -->
-            <button id="lang-toggle" onclick="toggleLanguage()" class="p-2 border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-50 transition duration-150 flex items-center md:hidden mobile-lang-position">
-                <span id="lang-flag-mobile" class="mr-2" role="img" aria-label="Flag"></span>
-                <span id="lang-text-mobile"></span>
-            </button>
-
-            <!-- Top Row (Title and Toggle) - Adjusted for desktop: Toggle is now left of the title -->
-            <div class="flex items-center w-full md:w-auto mb-3 md:mb-0 pt-8 md:pt-0">
-                <!-- Language Toggle for Desktop (Displayed on md screens and moved to the left) -->
-                <button id="lang-toggle-desktop" onclick="toggleLanguage()" class="p-2 border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-50 transition duration-150 flex items-center mr-4 hidden md:flex">
-                    <span id="lang-flag-desktop" class="mr-2" role="img" aria-label="Flag"></span>
-                    <span id="lang-text-desktop"></span>
-                </button>
-                <div id="header-project-title" class="header-title font-bold tracking-widest uppercase ml-0">
+            <!-- Mobile Top Row: Title (Left) and Toggle (Right) -->
+            <div class="mobile-header-top md:hidden">
+                 <div id="header-project-title" class="header-title font-bold tracking-widest uppercase ml-0">
                     TENTATIVE PHD RESEARCH PROJECT
+                </div>
+                <button id="lang-toggle-mobile" onclick="toggleLanguage()" class="p-2 border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-50 transition duration-150 flex items-center">
+                    <span id="lang-flag-mobile" class="mr-2" role="img" aria-label="Flag"></span>
+                    <span id="lang-text-mobile"></span>
+                </button>
+            </div>
+
+            <!-- Desktop/Tablet View (md:flex-row) -->
+            <div class="hidden md:flex justify-between items-center w-full">
+                <!-- Title (Desktop Left) -->
+                <div id="header-project-title-desktop" class="header-title font-bold tracking-widest uppercase ml-0">
+                    TENTATIVE PHD RESEARCH PROJECT
+                </div>
+
+                <!-- Desktop Navigation Links and Language Toggle (Right Side) -->
+                <div class="flex items-center space-x-8">
+                    <!-- Navigation Links -->
+                    <nav class="w-auto">
+                        <div class="flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                            <a href="cv.html" id="nav-cv" class="hover:text-black transition duration-150 flex items-center">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                View/Download C.V.
+                            </a>
+                            <a href="#objectives" id="nav-core-areas" class="hover:text-black transition duration-150">Core Areas</a>
+                            <a href="#contact" id="nav-contact" class="hover:text-black transition duration-150">Contact</a>
+                        </div>
+                    </nav>
+
+                    <!-- Language Toggle (Desktop Rightmost) -->
+                    <button id="lang-toggle-desktop" onclick="toggleLanguage()" class="p-2 border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-50 transition duration-150 flex items-center">
+                        <span id="lang-flag-desktop" class="mr-2" role="img" aria-label="Flag"></span>
+                        <span id="lang-text-desktop"></span>
+                    </button>
                 </div>
             </div>
 
-            <!-- Navigation Links (Bottom row on mobile, full width and wrapping) -->
-            <nav class="w-full md:w-auto">
-                <div class="flex flex-wrap justify-between md:justify-end md:space-x-8 text-sm font-medium uppercase tracking-widest pt-2 md:pt-0 border-t md:border-t-0 border-gray-100">
-                    <a href="cv.html" id="nav-cv" class="hover:text-black transition duration-150 flex items-center">
+            <!-- Mobile Navigation Links (Below Top Row, Centered) -->
+            <nav class="w-full md:hidden">
+                <div class="flex flex-wrap justify-center space-x-4 text-sm font-medium uppercase tracking-widest pt-2 border-t border-gray-100 mobile-nav-links">
+                    <a href="cv.html" id="nav-cv-mobile" class="hover:text-black transition duration-150 flex items-center">
                         <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                         View/Download C.V.
                     </a>
-                    <a href="#objectives" id="nav-core-areas" class="hover:text-black transition duration-150">Core Areas</a>
-                    <a href="#contact" id="nav-contact" class="hover:text-black transition duration-150">Contact</a>
+                    <a href="#objectives" id="nav-core-areas-mobile" class="hover:text-black transition duration-150">Core Areas</a>
+                    <a href="#contact" id="nav-contact-mobile" class="hover:text-black transition duration-150">Contact</a>
                 </div>
             </nav>
 
@@ -85,10 +112,10 @@
                 Decoding Consumer Psychology in Immersive Marketing
             </h1>
             <p id="hero-subtitle" class="text-xl sm:text-2xl font-normal max-w-4xl mx-auto mb-6">
-                An AI-Generative Framework Using Performing Arts Approaches to Orchestrate and Predict Brand Experience Outcomes.
+                An AI-Generative Framework Using Performing Arts Approaches to Orchestrate and Predict Brand Experience Outcomes
             </p>
             <p id="hero-desc" class="text-lg font-light max-w-4xl mx-auto mb-10 text-gray-300">
-                This project aims to elaborate consumer behavior psychology by focusing on four progressive core areas. Each systematically builds on the previous research and provides the empirical foundation for the subsequent investigations, culminating in an AI-powered framework for brand experience design.
+                This project aims to elaborate consumer behavior psychology by focusing on four progressive core areas. Each area systematically builds on the previous research and provides the empirical foundation for the subsequent investigations, culminating in an AI-powered framework for brand experience design.
             </p>
         </div>
     </section>
@@ -182,8 +209,8 @@
                 headerTitle: 'TENTATIVE PHD RESEARCH PROJECT', 
                 docTitle: 'PHD Project: Decoding Consumer Psychology in Immersive Marketing',
                 heroTitle: 'Decoding Consumer Psychology in Immersive Marketing',
-                heroSubtitle: 'An AI-Generative Framework Using Performing Arts Approaches to Orchestrate and Predict Brand Experience Outcomes',
-                heroDesc: 'This project aims to elaborate consumer behavior psychology by focusing on four progressive core areas. Each area systematically builds on the previous research and provides the empirical foundation for the subsequent investigations, culminating in an AI-powered framework for brand experience design.',
+                heroSubtitle: 'An AI-Generative Framework Using Performing Arts Approaches to Orchestrate and Predict Brand Experience Outcomes.',
+                heroDesc: 'This project aims to elaborate consumer behavior psychology by focusing on four progressive core areas. Each systematically builds on the previous research and provides the empirical foundation for the subsequent investigations, culminating in an AI-powered framework for brand experience design.',
                 objectivesTitle: 'Four Core Research Areas',
                 obj1Title: '1. Creating the Stage',
                 obj1Text: 'Transform <b>theatrical elements</b>—performers, dialogue, lighting, and props—into experiential marketing essentials, to orchestrate brand-consumer interactive scenarios and form actionable decision cues.',
@@ -230,16 +257,31 @@
         function updateContent(lang) {
             const data = content[lang];
             
-            // Mobile and Desktop elements need to be updated with the same content
-            document.getElementById('nav-cv').innerHTML = `<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>${data.navCV}`;
-            document.getElementById('nav-core-areas').textContent = data.navCoreAreas;
-            document.getElementById('nav-contact').textContent = data.navContact;
+            // Update mobile and desktop navigation links
+            const navLinks = [
+                { id: 'nav-cv', mobileId: 'nav-cv-mobile', html: `<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>${data.navCV}` },
+                { id: 'nav-core-areas', mobileId: 'nav-core-areas-mobile', text: data.navCoreAreas },
+                { id: 'nav-contact', mobileId: 'nav-contact-mobile', text: data.navContact }
+            ];
 
+            navLinks.forEach(link => {
+                if (link.html) {
+                    document.getElementById(link.id).innerHTML = link.html;
+                    document.getElementById(link.mobileId).innerHTML = link.html;
+                } else if (link.text) {
+                    document.getElementById(link.id).textContent = link.text;
+                    document.getElementById(link.mobileId).textContent = link.text;
+                }
+            });
+
+            // Update Header Title (Desktop and Mobile)
+            document.getElementById('header-project-title-desktop').textContent = data.headerTitle;
             document.getElementById('header-project-title').textContent = data.headerTitle;
+            
             document.getElementById('doc-title').textContent = data.docTitle;
             document.getElementById('hero-title').textContent = data.heroTitle;
             document.getElementById('hero-subtitle').textContent = data.heroSubtitle;
-            document.getElementById('hero-desc').textContent = data.heroDesc;
+            document.getElementById('hero-desc').innerHTML = data.heroDesc; 
             document.getElementById('objectives-title').textContent = data.objectivesTitle;
             
             document.getElementById('obj1-title').textContent = data.obj1Title;
