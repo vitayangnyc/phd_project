@@ -48,10 +48,10 @@
 <body class="text-gray-800">
 
     <header class="border-b border-gray-100 bg-white sticky top-0 z-10">
-        <!-- Main Header Container: Stacks vertically on mobile (flex-col), changes to horizontal on md: (md:flex-row) -->
+        <!-- Main Header Container -->
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-start md:items-center">
             
-            <!-- Mobile Top Row: Title (Left) and Toggle (Right) -->
+            <!-- Mobile Top Row -->
             <div class="mobile-header-top md:hidden">
                  <div id="header-project-title" class="header-title font-bold tracking-widest uppercase ml-0">
                     TENTATIVE PHD RESEARCH PROJECT
@@ -62,16 +62,15 @@
                 </button>
             </div>
 
-            <!-- Desktop/Tablet View (md:flex-row) -->
+            <!-- Desktop/Tablet View -->
             <div class="hidden md:flex justify-between items-center w-full">
                 <!-- Title (Desktop Left) -->
                 <div id="header-project-title-desktop" class="header-title font-bold tracking-widest uppercase ml-0">
                     TENTATIVE PHD RESEARCH PROJECT
                 </div>
 
-                <!-- Desktop Navigation Links and Language Toggle (Right Side) -->
+                <!-- Desktop Navigation Links and Language Toggle -->
                 <div class="flex items-center space-x-8">
-                    <!-- Navigation Links -->
                     <nav class="w-auto">
                         <div class="flex space-x-8 text-sm font-medium uppercase tracking-widest">
                             <a href="cv.html" id="nav-cv" class="hover:text-black transition duration-150 flex items-center">
@@ -83,7 +82,6 @@
                         </div>
                     </nav>
 
-                    <!-- Language Toggle (Desktop Rightmost) -->
                     <button id="lang-toggle-desktop" onclick="toggleLanguage()" class="p-2 border border-gray-300 rounded-lg text-sm font-semibold hover:bg-gray-50 transition duration-150 flex items-center">
                         <span id="lang-flag-desktop" class="mr-2" role="img" aria-label="Flag"></span>
                         <span id="lang-text-desktop"></span>
@@ -91,7 +89,7 @@
                 </div>
             </div>
 
-            <!-- Mobile Navigation Links (Below Top Row, Centered) -->
+            <!-- Mobile Navigation Links -->
             <nav class="w-full md:hidden">
                 <div class="flex flex-wrap justify-center space-x-4 text-sm font-medium uppercase tracking-widest pt-2 border-t border-gray-100 mobile-nav-links">
                     <a href="cv.html" id="nav-cv-mobile" class="hover:text-black transition duration-150 flex items-center">
@@ -102,7 +100,6 @@
                     <a href="#contact" id="nav-contact-mobile" class="hover:text-black transition duration-150">Contact</a>
                 </div>
             </nav>
-
         </div>
     </header>
 
@@ -117,6 +114,12 @@
             <p id="hero-desc" class="text-lg font-light max-w-4xl mx-auto mb-10 text-gray-300">
                 This project aims to elaborate consumer behavior psychology by focusing on four progressive core areas. Each area systematically builds on the previous research and provides the empirical foundation for the subsequent investigations, culminating in an AI-powered framework for brand experience design.
             </p>
+            <!-- Hero Section 按鈕 -->
+            <div class="mt-8">
+                <a href="Vita%20Yang_Theatrical%20Lab%20as%20a%20Method%20for%20Consumer%20Experience%20Research_20260117.pdf" target="_blank" rel="noopener noreferrer" id="hero-button" class="inline-block px-8 py-3 border-2 border-[#FFC745] text-[#FFC745] font-semibold rounded-full hover:bg-[#FFC745] hover:text-[#007A78] transition duration-300 uppercase tracking-widest text-sm">
+                    READ THE MINI THESIS
+                </a>
+            </div>
         </div>
     </section>
 
@@ -124,7 +127,7 @@
 
         <section id="objectives" class="mb-24">
             <h2 id="objectives-title" class="text-3xl sm:text-4xl font-light text-center mb-16 text-gray-900 border-b border-gray-200 pb-3 uppercase tracking-wider">Four Core Research Areas</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-x-10 gap-y-12 mb-16">
                 
                 <div class="p-4 border-l-2 border-gray-300 hover:border-black transition duration-300">
                     <div class="text-3xl mb-4 text-gray-900">
@@ -166,6 +169,13 @@
                     <p id="obj4-text" class="text-gray-600 text-sm">This part of the research integrates the frameworks and data to train an <b>Al model</b> that automatically generates brand archetypes and dynamic brand encounter scripts to manage experiences, encourage authentic engagement, and drive value creation.</p>
                 </div>
             </div>
+
+            <!-- 研究領域下方的黑底白邊按鈕 -->
+            <div class="text-center">
+                <a href="Vita%20Yang_Theatrical%20Lab%20as%20a%20Method%20for%20Consumer%20Experience%20Research_20260117.pdf" target="_blank" rel="noopener noreferrer" id="objectives-button" class="inline-block px-8 py-3 bg-black border-2 border-white text-white font-semibold rounded-full shadow-lg hover:bg-white hover:text-black hover:border-black transition duration-300 uppercase tracking-widest text-sm">
+                    READ THE MINI THESIS
+                </a>
+            </div>
         </section>
 
     </main>
@@ -198,7 +208,6 @@
             });
         });
 
-
         let currentLang = 'en';
 
         const content = {
@@ -211,6 +220,8 @@
                 heroTitle: 'Decoding Consumer Psychology in Immersive Marketing',
                 heroSubtitle: 'An AI-Generative Framework Using Performing Arts Approaches to Orchestrate and Predict Brand Experience Outcomes.',
                 heroDesc: 'This project aims to elaborate consumer behavior psychology by focusing on four progressive core areas. Each systematically builds on the previous research and provides the empirical foundation for the subsequent investigations, culminating in an AI-powered framework for brand experience design.',
+                heroButton: 'READ THE MINI THESIS',
+                objectivesButton: 'READ THE MINI THESIS',
                 objectivesTitle: 'Four Core Research Areas',
                 obj1Title: '1. Creating the Stage',
                 obj1Text: 'Transform <b>theatrical elements</b>—performers, dialogue, lighting, and props—into experiential marketing essentials, to orchestrate brand-consumer interactive scenarios and form actionable decision cues.',
@@ -236,6 +247,8 @@
                 heroTitle: '解碼沉浸式行銷中的消費者心理學',
                 heroSubtitle: '以表演藝術為基礎方法的人工智慧生成框架',
                 heroDesc: '<p class="mb-1.2 ">本計畫旨在透過四個相互連結的核心領域，深入闡述消費者行為心理學。</p><p class="mb-1.5">各領域層層遞進，最終整合為一個以人工智慧為核心的品牌體驗設計架構。</p>',
+                heroButton: '閱讀研究提案小論文',
+                objectivesButton: '閱讀研究提案小論文',
                 objectivesTitle: '四個核心研究領域',
                 obj1Title: '1. 創造研究「舞台」模型',
                 obj1Text: `<p class="mb-1.5">將戲劇元素（表演者、對白、燈光與道具等）轉化為體驗式行銷的各項核心要素，視之為<b>變數</b>。</p><p class="mb-1.5">用前述要素創造及模擬品牌與消費者的互動情境為可控制模型，形成各種模型腳本。</p><p>收集消費者反應，形成可量化的<b>購買決策因素對應組合</b>。</p>`,
@@ -244,7 +257,7 @@
                 obj3Title: '3. 構建消費者旅程',
                 obj3Text: `<p class="mb-1.5">藉由醫學教育中的<b>標準化病人 (Standard Patient)</b> 方法，本研究將上述的舞台效果以「變數」形式逐步設計編排的品牌及消費者的敘事藍圖，使互動過程<b>完全受控</b>。</p><p>透過系統化的演練，生成全面的互動資料組合，以期能<b>藉由數據精準地優化每個顧客旅程接觸點</b>。</p>`,
                 obj4Title: '4. 人工智慧賦形<br>&nbsp;&nbsp;&nbsp;&nbsp;品牌接觸點動態塑型', 
-                obj4Text: `<p class="mb-1.5">此部分將整合前述的分析框架和數據資料，訓練一個<b>人工智慧模型</b>，使其能自動生成品牌價值人格原型，並自動依變數生成品牌接觸點旅程敍事，打造對應可控模型。</p><p>此模型使顧客<b>獲得自然且流暢的接觸體驗、深度參與互動，並驅動價值轉化，實現商業效益最大化</b>。</p>`,
+                obj4Text: `<p class="mb-1.5">此部分將整合前述的分析框架和數據資料，訓練一個<b>人工智慧模型</b>，使其能自動生成品牌價值人格原型，並自動依變數生成 brand archetypes 和動態品牌接觸點旅程敘事，打造對應可控模型。</p><p>此模型使顧客<b>獲得自然且流暢的接觸體驗、深度參與互動，並驅動價值轉化，實現商業效益最大化</b>。</p>`,
                 contactTitle: '聯絡方式',
                 contactTextAndEmail: '如欲進行合作洽談或需進一步瞭解本研究計畫 <a href="mailto:vitayang@vitayang.info" class="underline hover:text-gray-200 transition duration-150">vitayang@vitayang.info</a>',
                 footerCopy: '&copy; 2025 博士研究計畫 | 內容皆為暫定，依研究進度更動。',
@@ -257,7 +270,7 @@
         function updateContent(lang) {
             const data = content[lang];
             
-            // Update mobile and desktop navigation links
+            // 更新導覽連結
             const navLinks = [
                 { id: 'nav-cv', mobileId: 'nav-cv-mobile', html: `<svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>${data.navCV}` },
                 { id: 'nav-core-areas', mobileId: 'nav-core-areas-mobile', text: data.navCoreAreas },
@@ -274,16 +287,17 @@
                 }
             });
 
-            // Update Header Title (Desktop and Mobile)
+            // 更新標題與 Hero Section
             document.getElementById('header-project-title-desktop').textContent = data.headerTitle;
             document.getElementById('header-project-title').textContent = data.headerTitle;
-            
             document.getElementById('doc-title').textContent = data.docTitle;
             document.getElementById('hero-title').textContent = data.heroTitle;
             document.getElementById('hero-subtitle').textContent = data.heroSubtitle;
             document.getElementById('hero-desc').innerHTML = data.heroDesc; 
-            document.getElementById('objectives-title').textContent = data.objectivesTitle;
+            document.getElementById('hero-button').textContent = data.heroButton;
             
+            // 更新研究內容區塊
+            document.getElementById('objectives-title').textContent = data.objectivesTitle;
             document.getElementById('obj1-title').textContent = data.obj1Title;
             document.getElementById('obj1-text').innerHTML = data.obj1Text;
             document.getElementById('obj2-title').textContent = data.obj2Title;
@@ -293,13 +307,16 @@
             document.getElementById('obj4-title').innerHTML = data.obj4Title;
             document.getElementById('obj4-text').innerHTML = data.obj4Text;
             
+            // 更新區塊下方的按鈕
+            document.getElementById('objectives-button').textContent = data.objectivesButton;
+
+            // 更新聯絡與頁尾
             document.getElementById('contact-title').textContent = data.contactTitle;
             document.getElementById('contact-text-and-email').innerHTML = data.contactTextAndEmail;
-            
             document.getElementById('footer-copy').innerHTML = data.footerCopy;
             document.getElementById('footer-candidate').textContent = data.footerCandidate;
 
-            // Update Language Toggles (Mobile and Desktop)
+            // 更新語系切換按鈕
             document.getElementById('lang-flag-mobile').textContent = data.toggleFlag;
             document.getElementById('lang-text-mobile').textContent = data.toggleText;
             document.getElementById('lang-flag-desktop').textContent = data.toggleFlag;
